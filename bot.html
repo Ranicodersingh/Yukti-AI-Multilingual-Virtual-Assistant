@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yukti AI | Multilingual Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-shell">
+        <header class="header">
+            <div class="brand">
+                <div class="status-dot"></div>
+                <h1>Yukti AI</h1>
+            </div>
+            <div class="controls">
+                <button id="clearBtn" class="icon-btn" onclick="clearChat()" title="Clear Chat">🗑️</button>
+                <button id="muteBtn" class="icon-btn" onclick="toggleMute()">🔊</button>
+                <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+            </div>
+        </header>
+
+        <main id="chatbox" class="chat-viewport">
+            <div class="msg bot-msg">Hello! I am Yukti AI. You can ask me questions in English, Hindi, or Telugu.</div>
+        </main>
+
+        <div id="typing" class="typing-indicator hidden">Yukti is thinking...</div>
+
+        <footer class="input-area">
+            <div class="input-container">
+                <button class="mic-btn" onclick="startVoice()">🎤</button>
+                <input type="text" id="userInput" placeholder="Type a message..." autocomplete="off">
+                <button class="send-btn" onclick="handleSend()">Send</button>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
